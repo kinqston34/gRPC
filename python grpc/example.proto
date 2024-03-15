@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+package example;
+
+message Request {
+    string message = 1;
+    int32 num = 2;
+}
+
+message Response{
+    string reply = 1;
+    int32 re_num = 2;
+}
+
+service ExampleService {
+    rpc SendMessage (Request) returns (Response);
+}
